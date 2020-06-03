@@ -18,6 +18,7 @@ module PgSync
       # start
       start_time = Time.now
 
+      puts args
       if args.size > 2
         raise Error, "Usage:\n    pgsync [options]"
       end

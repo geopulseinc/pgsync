@@ -8,7 +8,9 @@ module PgSync
     end
 
     def perform(testing: true)
+      puts "args: #{@args}"
       opts = parse_args
+      puts "opts: #{opts}"
 
       # TODO throw error in 0.6.0
       warn "Specify either --db or --config, not both" if opts[:db] && opts[:config]
